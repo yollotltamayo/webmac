@@ -2,6 +2,7 @@
 
 ## Tecnologías 
 ### Principales
-- https://www.typescriptlang.org/ 
-- https://www.rust-lang.org/
-- https://rocket.rs/v0.4/
+
+- [Rust Lang](https://www.typescriptlang.org/)
+- [Typescript](https://www.rust-lang.org/)
+- [Rocket 🚀](https://rocket.rs/v0.4/)
