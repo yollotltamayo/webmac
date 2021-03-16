@@ -1,5 +1,7 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 
+use rocket::error::Error;
+
 #[macro_use]
 extern crate rocket;
 
@@ -8,6 +10,7 @@ fn hello() -> String {
     format!("¡Hola MAC!")
 }
 
-fn main() {
-    rocket::ignite().mount("/", routes![hello]).launch();
+#[rocket::main]
+async fn main() -> Result<(), Error> {
+    rocket::ignite().mount("/", routes![hello]).launch().await
 }
