@@ -6,7 +6,8 @@
 - [React ⚛️ ](https://reactjs.org/)
 - [Rust Lang](https://www.rust-lang.org/)
 - [Rocket 🚀](https://rocket.rs/v0.4/)
-
+## Como instalar Rust
+  [Checa aqui](https://www.rust-lang.org/tools/install) 
 ## Como poner todo a funcionar
 ``` bash
 # clona este repo
