@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style.css">
+        <title></title>
+    </head>
+    <body>
+        <section id="layout">
+            <nav>
+                <ul>
+                    <li>WEBMAC</li>
+                    <li>WEBMAC</li>
+                    <li>WEBMAC</li>
+                    <li>WEBMAC</li>
+                </ul>
+            </nav>
+            <color>cdj</color>
+            
+            <aside>
+                <ul>
+                    <li>WEBMAC</li>
+                    <li>WEBMAC</li>
+                    <li>WEBMAC</li>
+                    <li>WEBMAC</li>
+                </ul>
+            </aside>
+            <main id="content">
+                <!--<div class="card">-->
+                <!--<div class="card">-->
+                    <!--<h3 >Topico</h3>-->
+                    <!--<h2> Titulo</h2>-->
+                    <!--<h1 class="bordes"></h1>-->
+                    <!--<h1 >bla bla blablabl</h1>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card">-->
+                    <!--<h3 >HOLA</h3>-->
+                    <!--<h1 >bla bla blablabl</h1>-->
+                    <!--<h1 class="bordes"><a href="" target="_blank" rel="noopener noreferrer">Videoconferencia</a></h1>-->
+                    <!--<h1 ><a href="" target="_blank" rel="noopener noreferrer"> Plataforma </a></h1>-->
+                <!--</div>-->
+            </main>
+            <footer>bor</footer>
+        </section>
+        <script>
+            const liElement = (data) => {
+                const div = document.createElement('div');
+                const h3 = document.createElement('h3');
+                const h2 = document.createElement('h2');
+                const bordes = document.createElement('h1');
+                const h1 = document.createElement('h1');
+                div.className= "card2";
+                bordes.className="bordes";
+                h3.innerText="topico";
+                h2.innerText=data.title;
+                h1.innerText=data.description;
+                div.appendChild(h3);
+                div.appendChild(h2);
+                div.appendChild(bordes);
+                div.appendChild(h1);
+                const div2 = document.createElement('div');
+                div2.className= "card";
+                div2.appendChild(div);
+                return div2;
+            };
+            const loadDom = (data) => {
+                const ul = document.createElement('ul');
+                const main = document.getElementById('content');
+                data.map((user) => main.appendChild(liElement(user)));
+            };
+            var res =  fetch('https://ghibliapi.herokuapp.com/films')
+                .then( res => res.json() )
+                .then(data => {
+                    loadDom(data);
+                });
+        </script>
+    </body>
+</html>
