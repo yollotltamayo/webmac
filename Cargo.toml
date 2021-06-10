@@ -1,9 +1,0 @@
-[package]
-name = "webmac"
-version = "0.1.0"
-authors = ["Bruno A. Muciño <mucinoab@gmail.com>"]
-edition = "2018"
-
-[dependencies]
-rocket = "0.4.7"
-rocket_contrib = "0.4.7"
