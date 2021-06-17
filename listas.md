@@ -1,0 +1,16 @@
+- Debe tener la estructura de HTML5. (2%)
+- Debe estar organizado mediante carpetas. (2%)
+- Los archivos html únicamente deben ser de estructura y contenido. (2%)
+- Los archivos css deben contener los estilos. (2%)
+- La organización o distribución debe ser con flexbox y grid. (20%)
+- El header debe tener un logo o una imagen. (2%)
+- El menú de navegación debe tener por lo menos tres opciones. (2%), home , acerca de la facultad,iniciar sesion,
+- Debe haber una barra lateral. (2%) sticky, chiquita, hoverable y ya.
+- El contenido principal debe estar en main. (2%)
+- Sus datos propios deben estar en footer. (2%)
+- Debe haber un audio. (1%)  apretar botones
+- Debe haber un video (de YouTube). (1%)  en el carrusel
+- Debe haber una animación en canvas. (10%)   en el menu o de fondo
+- Debe haber un procesamiento  a nivel de pixeles sobre una imagen. (10%) hover de imagenes
+- Debe haber algún dibujo SVG. (10%) en cualquier logo o icono
+- Debe tener forma de registrar, consultar, actualizar y borrar los datos de los usuarios en una base de datos del lado del servidor. (30%) usuario

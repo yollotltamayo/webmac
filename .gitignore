@@ -1,6 +1,5 @@
 /target
 /venv
-listas.md
 /__pycache__
 *.pyc
 /.vim

@@ -1,5 +1,5 @@
 export FLASK_APP=main.py
-if  ! [ -x "$(command -v nodemon)" ]; then
+if   [ -x "$(command -v nodemon)" ]; then
     nodemon --exec "flask run" -e css,js,html
 else
     echo "prueb haciendo npm i -g nodemon"
