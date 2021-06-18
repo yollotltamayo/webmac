@@ -108,8 +108,8 @@ html, body {
                        ". slide slide slide .  " 
                        "lef con con con .  " 
                        "footer footer footer  footer footer";
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 10% 25% auto 5%;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: auto auto auto 5%;
 }
 
 nav {
