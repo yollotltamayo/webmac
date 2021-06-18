@@ -4,7 +4,7 @@ const liElement = (data) => {
     const h2 = document.createElement('h2');
     const bordes = document.createElement('h1');
     const h1 = document.createElement('h1');
-    div.className= "card2";
+    div.className= "card";
     bordes.className="bordes";
     h3.innerText="topico";
     h2.innerText=data.title;
@@ -13,10 +13,10 @@ const liElement = (data) => {
     div.appendChild(h2);
     div.appendChild(bordes);
     div.appendChild(h1);
-    const div2 = document.createElement('div');
-    div2.className= "card";
-    div2.appendChild(div);
-    return div2;
+    //const div2 = document.createElement('div');
+    //div2.className= "card";
+    //div2.appendChild(div);
+    return div;
 };
 const loadDom = (data) => {
     const ul = document.createElement('ul');

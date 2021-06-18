@@ -67,32 +67,48 @@
 }
 
 nav {
-  background-color: #72A0C1;
+  background-color: #1c3d6c;
 }
 nav ul {
   all: unset;
   list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content:flex-end;
+  align-items:center;
 }
 nav ul :nth-child(1) {
-  font-size: 3vw;
+    margin-right:auto;
 }
 nav li {
-  flex: auto;
+    margin: 0 15px;
+    color:white;
+    font-family: lato,open sans,helvetica neue,Helvetica,Arial,sans-serif;
+    font-size:16px;
+
+    padding:10px 20px;
+      transition: 0.3s;
+      border:0.5px solid transparent;
+      border-radius:12px;
+}
+nav li:hover {
+   background-color: #c5911f;
 }
 
 html, body {
   margin: 0;
-  height: 100%;
+  all:unset;
   background-color: #F8F8F8;
 }
 
 #layout {
   display: grid;
   height: 100%;
-  grid-template-areas: "nav nav nav nav nav " ". . slide slide .  " "lef con con con con  " "footer footer footer  footer footer";
-  grid-template-columns: 0.8fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "nav nav nav nav nav "
+                       ". slide slide slide .  " 
+                       "lef con con con .  " 
+                       "footer footer footer  footer footer";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 10% 25% auto 5%;
 }
 
@@ -100,13 +116,17 @@ nav {
   grid-area: nav;
 }
 
+/* barrita lateral*/
 aside {
-  /*grid-area: lef;*/
   grid-area: lef;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   height: 300px;
   position: sticky;
+  top:10vh;
+  margin-left:20px;
+  margin-right:20px;
+  margin-top:15px;
 }
 aside ul {
   position: sticky;
@@ -133,5 +153,8 @@ footer {
 #canvas {
     width:100%;
     height:100%;
+}
+.carrusel {
+   grid-area:slide;
 }
 /*# sourceMappingURL=style.css.map */
