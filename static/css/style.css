@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap");
+
 .card {
   margin: 1rem;
   background: #aaa;
@@ -13,6 +14,7 @@
   flex-grow: 1;
   width: 25%;
 }
+
 .card h1 {
   margin: 0 0 2rem 0;
   padding: 2rem 1.5rem;
@@ -20,6 +22,7 @@
   background-color: #fff;
   border: 0.0625rem solid linear-gradient(120deg, #DA2826, 0%, #25D7D9, 100%);
 }
+
 .card h3 {
   margin: 0;
   padding: 0;
@@ -38,11 +41,10 @@
   transform: translateY(-3px) scale(1.1);
 }
 
-
-
 nav {
   background-color: #1c3d6c;
 }
+
 nav ul {
   all: unset;
   list-style: none;
@@ -51,22 +53,24 @@ nav ul {
   justify-content:flex-end;
   align-items:center;
 }
-nav ul :nth-child(1) {
-    margin-right:auto;
-}
-nav li {
-    margin: 0 15px;
-    color:white;
-    font-family: lato,open sans,helvetica neue,Helvetica,Arial,sans-serif;
-    font-size:16px;
 
-    padding:10px 20px;
-      transition: 0.3s;
-      border:0.5px solid transparent;
-      border-radius:12px;
+nav ul :nth-child(1) {
+  margin-right:auto;
+}
+
+nav li {
+  margin: 0 15px;
+  color:white;
+  font-family: lato,open sans,helvetica neue,Helvetica,Arial,sans-serif;
+  font-size:16px;
+
+  padding:10px 20px;
+  transition: 0.3s;
+  border:0.5px solid transparent;
+  border-radius:12px;
 }
 nav li:hover {
-   background-color: #c5911f;
+  background-color: #c5911f;
 }
 
 html, body {
@@ -79,9 +83,9 @@ html, body {
   display: grid;
   height: 100%;
   grid-template-areas: "nav nav nav nav nav "
-                       ". slide slide slide .  " 
-                       "lef con con con .  " 
-                       "footer footer footer  footer footer";
+    ". slide slide slide .  "
+    "lef con con con .  "
+    "footer footer footer  footer footer";
   grid-template-columns: repeat(5,1fr);
   grid-template-rows: auto auto auto 5%;
 }
@@ -102,6 +106,7 @@ aside {
   margin-right:20px;
   margin-top:15px;
 }
+
 aside ul {
   position: sticky;
   all: unset;
@@ -124,11 +129,23 @@ footer {
   flex-wrap: wrap;
   align-items: flex-start;
 }
+
 #canvas {
-    width:100%;
-    height:100%;
+  width:100%;
+  height:100%;
 }
+
 .carrusel {
-   grid-area:slide;
+  grid-area:slide;
 }
-/*# sourceMappingURL=style.css.map */
+
+#salvapantallas { 
+  background: #00000060;
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+  left: 0px;
+  top: 0px; 
+  display: none; 
+  z-index: 9999; 
+}
