@@ -242,7 +242,6 @@ input[type="submit"]:hover {
     transition:0.5s;
 }
 .aviso-registro:hover{
-    /*mar: 10px 10px;*/
     color:#5184ff;
 }
 .aviso-error {
@@ -259,6 +258,57 @@ input[type="submit"]:hover {
    color:white;
    text-align:center;
    align-self:stretch;
+}
+.anuncio-registro{
+   font-size:9em; 
+   font-family: 'Karla', sans-serif;
+   color:white;
+   text-align:center;
+   align-self:center;
+   padding-left:10px;
+   font-weight: 700;
+}
+.anuncio-registro:hover,.anuncio:hover {
+    
+    animation: shadows 0.5s infinite alternate ;
+}
+@keyframes shadows {
+    0% { text-shadow: 5px 5px 0px #1C3D6Cff;}
+    14% { text-shadow: 5px 5px 0px #1C3D6Cff, 
+            10px 10px 0px #384B5Fff;}
+    28% { text-shadow: 5px 5px 0px #1C3D6Cff, 
+            10px 10px 0px #384B5Fff, 
+                    15px 15px 0px #545952ff;}
+   42% { text-shadow: 5px 5px 0px #1C3D6Cff, 
+       10px 10px 0px #384B5Fff, 
+       15px 15px 0px #545952ff, 
+       20px 20px 0px #716746ff;}
+   59%{ text-shadow: 5px 5px 0px #1C3D6Cff, 
+       10px 10px 0px #384B5Fff, 
+       15px 15px 0px #545952ff, 
+       20px 20px 0px #716746ff, 
+       25px 25px 0px #8D7539ff;}
+   73%{text-shadow: 5px 5px 0px #1C3D6Cff, 
+       10px 10px 0px #384B5Fff, 
+       15px 15px 0px #545952ff, 
+       20px 20px 0px #716746ff, 
+       25px 25px 0px #8D7539ff,
+       30px 30px 0px #A9832Cff;}
+   84% {text-shadow: 5px 5px 0px #1C3D6Cff, 
+           10px 10px 0px #384B5Fff, 
+           15px 15px 0px #545952ff, 
+           20px 20px 0px #716746ff, 
+           25px 25px 0px #8D7539ff, 
+           30px 30px 0px #A9832Cff, 
+       35px 35px 0px #C5911Fff;}
+   100% {text-shadow: 5px 5px 0px #1C3D6Cff, 
+           10px 10px 0px #384B5Fff, 
+           15px 15px 0px #545952ff, 
+           20px 20px 0px #716746ff, 
+           25px 25px 0px #8D7539ff, 
+           30px 30px 0px #A9832Cff, 
+       35px 35px 0px #C5911Fff;}
+
 }
 
 footer > ul {

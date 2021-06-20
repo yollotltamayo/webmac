@@ -1,26 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-    <form action = "/register" method = "POST">
-         <p><h3> Registrate</h3></p>
-         <p>Usuario</p>
-         <p><input type = 'text' name = 'username'/></p>
-         <p>Contraseña</p>
-         <p><input type = 'password' name = 'password'/></p>
-         <p><input type = 'submit' value = 'Login'/></p>
-  </form>
-      {% with messages = get_flashed_messages() %}
-      {% if messages %}
-      <ul class=flashes>
-          {% for message in messages %}
-          <li>{{ message }}</li>
-          {% endfor %}
-      </ul>
-      {% endif %}
-      {% endwith %}
-</body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+<div>
+    <div class="gradient_bg">
+        <div class="login-container">
+            <div class="form-datos">
+                <form class="forms"action = "/register" method = "POST">
+                    <p><h3> Registrate</h3></p>
+                    <p><input placeholder="Usuario"type = 'text' name = 'username'/></p>
+                    <p><input  placeholder="Contraseña"type = 'password' name = 'password'/></p>
+                    <p><input  type = 'submit' value = 'Login'/></p>
+                </form>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <b class="aviso-error">{{ message }}</b>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+            <div class="anuncio-registro">  WEBMAC</div>
+        </div>
+    </div>
+    {% endblock %}
