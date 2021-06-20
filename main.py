@@ -48,7 +48,7 @@ def login():
         if  validar(user, password):
             session['username'] = request.form['username']
             return redirect('/')
-        flash('usuario o contraseña incorrectos')
+        flash('Usuario o contraseña incorrectos')
         return redirect('/login')
     else:
         return render_template('login.html')

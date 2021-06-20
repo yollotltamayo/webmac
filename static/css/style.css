@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap");
+ @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,600&display=swap');
+
 
 html, body {
   margin: 0;
@@ -6,6 +9,7 @@ html, body {
   background-color: #F8F8F8;
   background-image:white;
     box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 * {
       box-sizing: inherit;
@@ -79,9 +83,6 @@ main {
   grid-area: con;
 }
 
-footer {
-  grid-area: footer;
-}
 
 #content {
   display: flex;
@@ -140,7 +141,9 @@ footer {
     height:100vh;
     display:flex;
     flex-direction:row;
-    align-items:center;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    align-content:center;
     justify-content:center;
 }
 .forms {
@@ -161,9 +164,10 @@ background-color:transparent;
 .gradient_bg {
     background:revert;
     animation:revert;
-    background-image: linear-gradient(45deg,#c5911f, #1c3d6c) !important;
+    background-image: linear-gradient( 45deg,#1C3D6Cff, #384B5Fff, #545952ff, #716746ff, #8D7539ff, #A9832Cff, #C5911Fff) !important;
+    /*45deg,#c5911f, #1c3d6c) !important;*/
     background-size:500% ;
-    animation: bg-change 5s  infinite alternate;
+    animation: bg-change 5s infinite alternate;
     height:100vh;
 }
 @keyframes bg-change {
@@ -207,9 +211,66 @@ input[type="submit"]:hover {
      .login-aclaracion {
         display:none;
      }
+     .form-datos {
+        order:2;
+     }
+}
+ @media only screen and (max-width: 1177px) {
+     .login-aclaracion {
+         order: 3;
+     }
+     .anuncio {
+         width:100%;
+        order:1;
+     }
+     .form-datos {
+        order:2;
+     }
 }
 .invert {
-        filter: invert(100%);
+    filter: invert(100%);
+}
+
+.form-datos {
+   display:grid; 
+   gap:20px;
+}
+.aviso-registro {
+    /*mar: 10px 10px;*/
+    color:white;
+    text-decoration: none;
+    transition:0.5s;
+}
+.aviso-registro:hover{
+    /*mar: 10px 10px;*/
+    color:#5184ff;
+}
+.aviso-error {
+    border: 0.5px red solid;    
+    border-radius:5px;
+    padding:10px 5px;
+    color:white;
+    background-color: rgba(255, 99, 71,0.1);
+    text-align:center;
+}
+.anuncio {
+   font-size:9em; 
+   font-family: 'Karla', sans-serif;
+   color:white;
+   text-align:center;
+   align-self:stretch;
+}
+
+footer > ul {
+    position:absolute;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+footer {
+  grid-area: footer;
+  margin : 0;
+  background-color:transparent;
 }
 
 #salvapantallas { 
