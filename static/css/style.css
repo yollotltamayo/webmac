@@ -1,50 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap");
 
-.card {
-  margin: 1rem;
-  background: #aaa;
-  font-family: "Roboto", sans-serif;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.2s linear;
-  color: #1E90FF;
-  text-align: center;
-  flex-grow: 1;
-  width: 25%;
-}
-
-.card h1 {
-  margin: 0 0 2rem 0;
-  padding: 2rem 1.5rem;
-  padding-top: 0rem;
-  background-color: #fff;
-  border: 0.0625rem solid linear-gradient(120deg, #DA2826, 0%, #25D7D9, 100%);
-}
-
-.card h3 {
+html, body {
   margin: 0;
-  padding: 0;
-  margin-top: 5px;
-  margin-right: 10px;
-  text-align: right;
-  font-size: 1.3rem;
+  /*all:unset;*/
+  background-color: #F8F8F8;
+  background-image:white;
+    box-sizing: border-box;
 }
-
-.bordes {
-  border-bottom: 0.0625rem solid #1a1a2e;
+* {
+      box-sizing: inherit;
 }
-
-.card:hover {
-  /*background-image: linear-gradient(120deg,#DA2826 0%, #25D7D9 100%) !important;*/
-  transform: translateY(-3px) scale(1.1);
-}
-
 nav {
   background-color: #1c3d6c;
 }
-
 nav ul {
   all: unset;
   list-style: none;
@@ -53,41 +21,34 @@ nav ul {
   justify-content:flex-end;
   align-items:center;
 }
-
 nav ul :nth-child(1) {
-  margin-right:auto;
+    margin-right:auto;
 }
 
 nav li {
-  margin: 0 15px;
-  color:white;
-  font-family: lato,open sans,helvetica neue,Helvetica,Arial,sans-serif;
-  font-size:16px;
-
-  padding:10px 20px;
-  transition: 0.3s;
-  border:0.5px solid transparent;
-  border-radius:12px;
+    margin: 0 15px;
+    color:white;
+    font-family: lato,open sans,helvetica neue,Helvetica,Arial,sans-serif;
+    font-size:16px;
+    padding:10px 20px;
+      transition: 0.3s;
+      border:0.5px solid transparent;
+      border-radius:12px;
 }
 nav li:hover {
-  background-color: #c5911f;
+   background-color: #c5911f;
 }
 
-html, body {
-  margin: 0;
-  all:unset;
-  background-color: #F8F8F8;
-}
 
 #layout {
   display: grid;
   height: 100%;
   grid-template-areas: "nav nav nav nav nav "
-    ". slide slide slide .  "
-    "lef con con con .  "
-    "footer footer footer  footer footer";
+                       ". slide slide slide .  " 
+                       "lef con con con .  " 
+                       "footer footer footer  footer footer";
   grid-template-columns: repeat(5,1fr);
-  grid-template-rows: auto auto auto 5%;
+  grid-template-rows: auto auto auto auto;
 }
 
 nav {
@@ -106,7 +67,6 @@ aside {
   margin-right:20px;
   margin-top:15px;
 }
-
 aside ul {
   position: sticky;
   all: unset;
@@ -129,14 +89,127 @@ footer {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-
 #canvas {
-  width:100%;
-  height:100%;
+    width:100%;
+    height:100%;
+}
+.carrusel {
+   grid-area:slide;
 }
 
-.carrusel {
-  grid-area:slide;
+.card {
+  margin: 1rem;
+  background: #aaa;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s linear;
+  color: #1E90FF;
+  text-align: center;
+  flex-grow: 1;
+  width: 25%;
+}
+.card h1 {
+  margin: 0 0 2rem 0;
+  padding: 2rem 1.5rem;
+  padding-top: 0rem;
+  background-color: #fff;
+  border: 0.0625rem solid linear-gradient(120deg, #DA2826, 0%, #25D7D9, 100%);
+}
+.card h3 {
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  margin-right: 10px;
+  text-align: right;
+  font-size: 1.3rem;
+}
+
+.bordes {
+  border-bottom: 0.0625rem solid #1a1a2e;
+}
+
+.card:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+/* forms es el estilo para todos los formularios que se deban llenar*/
+
+.login-container {
+    height:100vh;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+.forms {
+background-color:transparent;
+    font-size:1.5em;
+    border:1px solid transparent;
+    border-radius:11px;
+    padding: 10px 20px;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+}
+.forms > h3 {
+  font-family: "Roboto", sans-serif;
+  color:white;
+}
+.login-aclaracion {
+   background: transparent; 
+}
+.gradient_bg {
+    background:revert;
+    animation:revert;
+    background-image: linear-gradient(45deg,#c5911f, #1c3d6c) !important;
+    background-size:500% ;
+    animation: bg-change 5s  infinite alternate;
+    height:100vh;
+}
+@keyframes bg-change {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+}
+input[type="password"],[type="text"]  {
+    background:rgba(255,255,255,0.1) !important;
+    border:0.1px solid rgba(255,255,255,0.5);
+    border-radius:5px;
+    padding:10px 5px;
+    min-width:100%;
+    max-width:100%;
+}
+input[type="submit"] {
+    background:rgba(255,255,255,0.1) !important;
+    width:100%;
+    margin:0;
+    font-size:1em;
+    border-radius:5px;
+    border : 1px white solid;
+    color:white;
+    padding: 5px;
+}
+input[type="submit"]:hover {
+    background-color : #5184ff;
+}
+::placeholder {
+  color: rgba(255,255,255,1);
+  font-size: 1.2em;
+  text-align:center;
+}
+.forms > p > {
+    width:100%;
+}
+ @media only screen and (max-width: 768px) {
+     .login-aclaracion {
+        display:none;
+     }
+}
+.invert {
+        filter: invert(100%);
 }
 
 #salvapantallas { 

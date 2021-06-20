@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <form action = "/login" method = "POST">
+<body class="gradient_bg">
+    <div class="login-container">
+    <form class="forms" action = "/login" method = "POST">
          <p><h3>Ingresa tus datos</h3></p>
-         <p><input type = 'text' name = 'username'/></p>
-         <p><input type = 'password' name = 'password'/></p>
-         <p><input type = 'submit' value = 'Login'/></p>
+         <p><input placeholder="Usuario" type = 'text' name = 'username'/></p>
+         <p><input placeholder="Contraseña" type = 'password' name = 'password'/></p>
+         <p><input  type = 'submit' value = 'Ingresar'/></p>
       </form>
       {% with messages = get_flashed_messages() %}
       {% if messages %}
@@ -20,5 +21,8 @@
       </ul>
       {% endif %}
       {% endwith %}
+      <div class="login-aclaracion">
+          <img class="invert" src="https://canada.unam.mx/wp-content/uploads/2018/12/FESAc-300x300.png" alt="">
+      </div>
 </body>
 </html>
