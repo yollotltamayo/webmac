@@ -1,12 +1,14 @@
+from utils import hash_password
+
 from flask import Flask,render_template,request,session,redirect,flash
 import os
 import db as d
 
 
 app = Flask(__name__,
-        static_url_path="",
-        static_folder="static",
-        template_folder="templates")
+    static_url_path="",
+    static_folder="static",
+    template_folder="templates")
 
 app.secret_key = 'holacomoestas'
 
@@ -16,18 +18,20 @@ DATABASE = 'base.sqlite'
 
 app.config['DATABASE'] = DATABASE
 
-def validar(user,password):
+def validar(user, password):
     db = d.get_db()
+
     _user = db.execute(
-            'SELECT * FROM user WHERE username = ?', (user,)
-        ).fetchone()
+        'SELECT * FROM user WHERE username = ?', (user,)
+    ).fetchone()
+
     if _user is None:
         return False
-    if _user['username'] == user and _user['password'] == password:
+    if _user['password'] == hash_password(user, password):
         return True
-    db.commit()
 
-    return True
+    return False
+
 @app.route('/')
 def index():
     if 'username' in session:
@@ -39,8 +43,9 @@ def index():
 @app.route('/login',methods =('POST','GET'))
 def login():
     if request.method == 'POST':
-        user ,password = request.form['username'], request.form['password']
-        if  validar(user,password):
+        user, password = request.form['username'], request.form['password']
+
+        if  validar(user, password):
             session['username'] = request.form['username']
             return redirect('/')
         flash('usuario o contraseña incorrectos')
@@ -51,25 +56,27 @@ def login():
 @app.route('/register',methods =('POST','GET'))
 def register():
     if request.method == 'POST':
-        user ,password = request.form['username'], request.form['password']
-        if not password or not user:
-            flash("ingresa contraseña"*(password=="") + " ingresa usuario"*(user==""))
-            return redirect('/register')
+        user = request.form['username']
+
         db = d.get_db()
         if db.execute(
-            """select id from user where username = ?""",(user,)
-            ).fetchone() is not None:
-            flash("Usuario ya registrado")
+            """SELECT ID
+            FROM user
+            WHERE username = ?""", (user,)
+        ).fetchone() is not None:
+            flash("Usuario ya registrado.")
             return redirect('/register')
 
         db.execute(
-                 'INSERT INTO user (username, password) VALUES (?, ?)',
-                (user,password)
+            "INSERT INTO user (username, password) VALUES (?, ?)",
+            (user, hash_password(user, request.form['password']))
         )
         db.commit()
         return redirect('/login')
+
     return render_template('register.html')
 
 if __name__ == '__main__':
     d.init_db()
     app.run()
+
