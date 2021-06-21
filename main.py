@@ -76,10 +76,6 @@ def register():
 
     return render_template('register.html')
 
-@app.route('/pixel')
-def pixel():
-    return render_template("pixel.html")
-
 if __name__ == '__main__':
     d.init_db()
     app.run()
