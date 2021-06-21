@@ -2,6 +2,7 @@
   "files": [
     "canvas.ts",
     "index.ts",
+    "pixel.ts",
   ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
