@@ -4,13 +4,25 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/style.css">
     <title>{% block title %}{% endblock %}-WEBMAC</title>
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     </head>
     <body>
         {% block content %}{% endblock %}
     </body>
+    <audio id="vapor">
+        <source src="multimedia/audio/mac2.mp3"></source>
     <footer>
         <ul>
             <li>lo</li>
         </ul>
     </footer>
+    <script>
+        var audio = $("#vapor")[0];
+        $(".anuncio").mouseenter(function() {
+            audio.play();
+        });
+        $(".anuncio").mouseout(function() {
+            audio.pause();
+        });
+    </script>
 </html>
