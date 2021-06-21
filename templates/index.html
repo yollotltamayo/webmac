@@ -1,17 +1,61 @@
 {% extends "layout.html" %}
 {% block content %}
         <section id="layout">
-            <nav>
-                <ul>
-                    <li>Webmac</li>
-                    <li>Inicio</li>
-                    <li>Admision</li>
-                    <li>Alumnos</li>
-                    <li>Egreso</li>
-                    <li>Administrativos</li>
-                    <li>Nosotros</li>
-                </ul>
-            </nav> 
+	        <nav id="main-nav">
+			<ul>
+				<li>
+					<a href="#">Inicio</a>
+				</li>
+				<li>
+					<a href="#">Servicios
+						<span class="arrow">&#x25BC;</span>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="http://www.becas.unam.mx/portal/index.php/licenciatura">Becas</a>
+						</li>
+						<li>
+							<a href="https://www.software.unam.mx/">Software</a>
+						</li>
+						<li>
+							<a href="http://quazar.acatlan.unam.mx/licenciaturas/231/">Titulación</a>
+								<span class="arrow">&#x25B6;</span>
+							</a>
+							<ul class="submenu-2">
+								<li>
+									<a href="https://www.acatlan.unam.mx/index.php?id=160">Servicio Social</a>
+								</li>
+								<li>
+									<a href="https://mac.acatlan.unam.mx/media/vinculos/2021/06/Diplomados_titulacion.pdf">Diplomados</a>
+								</li>
+								<li>
+									<a href="http://quazar.acatlan.unam.mx/licenciaturas/231/">Información General</a>
+								</li>
+							</ul>
+						</li>
+					</ul>		
+				</li>
+				<li>
+					<a href="#">Plataformas
+						<span class="arrow">&#x25BC;</span>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="https://www.acatlan.unam.mx/">FES Acatlán</a>
+						</li>
+						<li>
+							<a href="http://www.escolares.acatlan.unam.mx/">Escolares</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Iniciar Sesión</a>
+				</li>
+				<li>
+					<a href="#">Acerca de Nosotros</a>
+				</li>
+			</ul>
+		</nav>
             <div id="foto1" class="carrusel"> hola </div>
             <div id="foto2" class="carrusel"> hola </div>
             <div id="foto3" class="carrusel"> hola </div>
@@ -27,7 +71,6 @@
             </aside>
             <main id="content"> </main>
         </section>
-        <script src="js/index.js"></script>
     <canvas id="salvapantallas"></canvas>
   <script src="js/index.js" defer></script>
   <script src="js/canvas.js" defer></script>

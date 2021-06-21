@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="gradient_bg" style="color:white; font-weight: bold;">
+  <div class="login-container">
+    <div class="form-datos">
+    <p>Cambia cualquier color en una imagen.</p>
+      <canvas id="imagenCanvas"></canvas>
+      <input type="file" id="imageLoader" name="imageLoader"/>
+      <br><br>
+
+      <form id="colores">
+        <label>Color Viejo</label><br/>
+        <input type="text" id="color1" placeholder="#000000" minlength="6" maxlength="9" required value="#002b7a"/>
+        <br><br>
+        <label>Color Nuevo</label><br/>
+        <input type="text" id="color2" placeholder="#000000" minlength="6" maxlength="9" required value="#000000"/>
+        <br><br><br>
+        <button type="button" id="submit_button">Cambiar Color</button><br><br>
+        <button type=“button”><a href="/multimedia/imagenes/logo_fes_azul.png" download="canvas.png" id="link">Descargar Imagen</a></button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="js/pixel.js" defer></script>
+{% endblock %}

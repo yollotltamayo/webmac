@@ -14,33 +14,79 @@ html, body {
 * {
       box-sizing: inherit;
 }
-nav {
-  background-color: #1c3d6c;
-}
-nav ul {
-  all: unset;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content:flex-end;
-  align-items:center;
-}
-nav ul :nth-child(1) {
-    margin-right:auto;
+
+#main-nav a{
+	color: #f6f7f8;
+	background: #1c3d6c;
+	height: 64px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: background 0.4s;
 }
 
-nav li {
-    margin: 0 15px;
-    color:white;
-    font-family: lato,open sans,helvetica neue,Helvetica,Arial,sans-serif;
-    font-size:16px;
-    padding:10px 20px;
-      transition: 0.3s;
-      border:0.5px solid transparent;
-      border-radius:12px;
+#main-nav a:hover {
+	background: #c5911f;
 }
-nav li:hover {
-   background-color: #c5911f;
+
+#main-nav {}
+
+#main-nav ul{
+	list-style: none;
+	display: flex;
+}
+
+#main-nav li {
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+
+#main-nav li:hover .submenu > li {
+	display: block;
+	flex-direction: column;
+	top: 0px;
+}
+
+.submenu li {
+	display:none;
+	position: absolute;
+	top: 0px;
+}
+
+.submenu {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 100%;
+}
+
+.submenu li {
+	position:relative;
+}
+
+.submenu li:hover .submenu-2 li {
+	display:block;
+}
+
+.submenu-2 li {
+	display:none;
+}
+
+.submenu-2 { 
+	display:flex;
+	flex-direction: column;
+	position: absolute;
+	top: 0px;
+	left: 100$;
+	width: 120px;
+}
+
+.arrow { 
+	margin-left: 8px;
+	color: #eee;
+	font-size:12px;
 }
 
 
@@ -342,4 +388,15 @@ footer {
 .panel >{
     margin:0;
     padding:0;
+}
+
+button {
+    background:rgba(255,255,255,0.1);
+    width: 100%;
+    margin:0;
+    font-size:1em;
+    border-radius:5px;
+    border : 1px white solid;
+    color:white;
+    padding: 5px;
 }
