@@ -283,3 +283,25 @@ footer {
   display: none; 
   z-index: 9999; 
 }
+
+button {
+    background:rgba(255,255,255,0.1);
+    width: 100%;
+    margin:0;
+    font-size:1em;
+    border-radius:5px;
+    border : 1px white solid;
+    color:white;
+    padding: 5px;
+}
+input[type="text"] {
+    background:rgba(255,255,255,0.1) !important;
+    width:100%;
+    margin:0;
+    font-size:1em;
+    border-radius:5px;
+    border : 1px white solid;
+    color:white;
+    padding: 5px;
+}
+
