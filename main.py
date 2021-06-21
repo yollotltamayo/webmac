@@ -35,7 +35,6 @@ def validar(user, password):
 @app.route('/')
 def index():
     if 'username' in session:
-        session.clear()
         return render_template('index.html')
     else:
         return redirect('/login')
@@ -76,6 +75,14 @@ def register():
 
     return render_template('register.html')
 
+@app.route('/panel',methods =('POST','GET'))
+def panel():
+    if 'username' in session:
+        if request.method == 'POST':
+                pass
+        return render_template('panel.html')
+    return redirect('/login')
+
 @app.route('/pixel')
 def pixel():
     return render_template("pixel.html")
@@ -84,3 +91,4 @@ if __name__ == '__main__':
     d.init_db()
     app.run()
 
+        

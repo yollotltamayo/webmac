@@ -6,8 +6,8 @@
             <div class="form-datos">
                 <form class="forms"action = "/register" method = "POST">
                     <p><h3> Registrate</h3></p>
-                    <p><input placeholder="Usuario"type = 'text' name = 'username'/></p>
-                    <p><input  placeholder="Contraseña"type = 'password' name = 'password'/></p>
+                    <p><input required placeholder="Usuario"type = 'text' name = 'username'/></p>
+                    <p><input  required placeholder="Contraseña"type = 'password' name = 'password'/></p>
                     <p><input  type = 'submit' value = 'Login'/></p>
                 </form>
                 {% with messages = get_flashed_messages() %}
@@ -17,6 +17,9 @@
                 {% endfor %}
                 {% endif %}
                 {% endwith %}
+            <a class="aviso-registro" style="text-align:center;" href="/login">
+                <strong>¿Ya tienes cuenta? Accede aqui</strong>
+            </a>
             </div>
         <div class="login-aclaracion">
             <img class="invert" src="https://canada.unam.mx/wp-content/uploads/2018/12/FESAc-300x300.png" alt="">
