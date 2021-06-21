@@ -1,13 +1,15 @@
 {% extends "layout.html" %}
 {% block content %}
-
 <div class="gradient_bg">
     <div class="login-container">
         <div class="form-datos">
-            <form class="forms" action = "/login" method = "POST">
-                <p><h3>Ingresa tus datos</h3></p>
+            <form class="panel" action = "/login" method = "POST">
+                <p><h3>Tus datos</h3></p>
                 <p><input required placeholder="Usuario" type = 'text' name = 'username'/></p>
-                <p><input required placeholder="Contraseña" type = 'password' name = 'password'/></p>
+                hola 
+                <p>
+                hola
+                <input style="display:inline;" required placeholder="Contraseña" type = 'password' name = 'password'/></p>
                 <p><input  type = 'submit' value = 'Ingresar'/></p>
             </form>
             {% with messages = get_flashed_messages() %}
@@ -22,11 +24,9 @@
                 <strong>¿Aún no tienes cuenta? registrate aquí.</strong>
             </a>
         </div>
-        <div class="login-aclaracion">
-            <img class="invert" src="https://canada.unam.mx/wp-content/uploads/2018/12/FESAc-300x300.png" alt="">
-        </div>
-        <div class="anuncio">  WEBMAC</div>
     </div>
 </div>
-{% endblock %}
+
+{% endblock  %}
+
 
