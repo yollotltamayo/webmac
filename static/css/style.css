@@ -146,9 +146,15 @@ aside ul {
   flex-direction: column;
 }
 aside li{
+	display:flex;
   margin:0 auto;
   margin-top: 5px;
 }
+aside li:hover{
+	transform: translateY(-3px) scale(1.1);
+}
+
+
 main {
   grid-area: con;
 }
@@ -213,7 +219,7 @@ main {
     flex-wrap: wrap;
     align-items:flex-start;
     align-content:center;
-    justify-content:center;
+    jus>tify-content:center;
 }
 .forms {
 background-color:transparent;
