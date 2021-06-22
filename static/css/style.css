@@ -183,18 +183,15 @@ main {
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   overflow: hidden;
-  /*transition: all 0.2s linear;*/
   color: #1E90FF;
   text-align: center;
   flex-grow: 1;
-  /*height:300px;*/
   width: 35%;
 
 }
 .card h1 {
   margin: 0 0 2rem 0;
   padding: 2rem 1.5rem;
-  /*height:200px;*/
   max-height:200px;
   overflow:hidden;
   padding-top: 0rem;
