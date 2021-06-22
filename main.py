@@ -34,8 +34,8 @@ def validar(user, password):
 
 @app.route('/')
 def index():
-    if 'username' in session:
-        return render_template('index.html')
+    if all(val in session for val in  ['username','avatar']  ):
+        return render_template('index.html',user=session['username'],avatar=session['avatar'])
     else:
         return redirect('/login')
 
@@ -43,9 +43,16 @@ def index():
 def login():
     if request.method == 'POST':
         user, password = request.form['username'], request.form['password']
-
         if  validar(user, password):
+            session.clear()
             session['username'] = request.form['username']
+            session['avatar'] = "lol"
+            db = d.get_db()
+            avatar = db.execute( """SELECT avatar
+                FROM user
+                WHERE username = ?;""", (user,)
+            ).fetchone() 
+            session['avatar'] = "lol" if avatar is None else avatar['avatar']
             return redirect('/')
         flash('Usuario o contraseña incorrectos')
         return redirect('/login')
@@ -56,6 +63,7 @@ def login():
 def register():
     if request.method == 'POST':
         user = request.form['username']
+        avatar = request.form['avatar']
 
         db = d.get_db()
         if db.execute(
@@ -67,8 +75,8 @@ def register():
             return redirect('/register')
 
         db.execute(
-            "INSERT INTO user (username, password) VALUES (?, ?)",
-            (user, hash_password(user, request.form['password']))
+            "INSERT INTO user (username, password,avatar) VALUES (?, ?,?)",
+            (user, hash_password(user, request.form['password']),avatar)
         )
         db.commit()
         return redirect('/login')
@@ -83,6 +91,10 @@ def panel():
         return render_template('panel.html')
     return redirect('/login')
 
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/login')
 @app.route('/pixel')
 def pixel():
     return render_template("pixel.html")

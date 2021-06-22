@@ -1,92 +1,96 @@
 {% extends "layout.html" %}
 {% block content %}
-        <section id="layout">
-	        <nav id="main-nav">
-			<ul>
-				<li>
-					<a href="#">Inicio</a>
-				</li>
-				<li>
-					<a href="#">Servicios
-						<span class="arrow">&#x25BC;</span>
-					</a>
-					<ul class="submenu">
-						<li>
-							<a href="http://www.becas.unam.mx/portal/index.php/licenciatura">Becas</a>
-						</li>
-						<li>
-							<a href="https://www.software.unam.mx/">Software</a>
-						</li>
-						<li>
-							<a href="http://quazar.acatlan.unam.mx/licenciaturas/231/">Titulación</a>
-								<span class="arrow">&#x25B6;</span>
-							</a>
-							<ul class="submenu-2">
-								<li>
-									<a href="https://www.acatlan.unam.mx/index.php?id=160">Servicio Social</a>
-								</li>
-								<li>
-									<a href="https://mac.acatlan.unam.mx/media/vinculos/2021/06/Diplomados_titulacion.pdf">Diplomados</a>
-								</li>
-								<li>
-									<a href="http://quazar.acatlan.unam.mx/licenciaturas/231/">Información General</a>
-								</li>
-							</ul>
-						</li>
-					</ul>		
-				</li>
-				<li>
-					<a href="#">Plataformas
-						<span class="arrow">&#x25BC;</span>
-					</a>
-					<ul class="submenu">
-						<li>
-							<a href="https://www.acatlan.unam.mx/">FES Acatlán</a>
-						</li>
-						<li>
-							<a href="http://www.escolares.acatlan.unam.mx/">Escolares</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Iniciar Sesión</a>
-				</li>
-				<li>
-					<a href="#">Acerca de Nosotros</a>
-				</li>
-			</ul>
-		</nav>
-            <div id="foto1" class="carrusel"> hola </div>
-            <div id="foto2" class="carrusel"> hola </div>
-            <div id="foto3" class="carrusel"> hola </div>
-						<aside>
-							<ul>
-								<li>
-									<a href="https://www.facebook.com/MACAcatlanOficial/">
-										<i style="color:white;" class="fab fa-facebook-square fa-3x"></i>
-									</a>
-								</li>
-								<li>
-									<a href="https://www.youtube.com/channel/UC_lTHdhOi5XhRbl_FcY7eTw">
-										<i style="color:white;" class="fab fa-youtube fa-3x"></i>
-									</a>
-								</li>
-								<li>
-									<a href="https://www.acatlan.unam.mx/index.php?id=112">
-										<i style="color:white;" class="far fa-newspaper fa-3x"></i>
-									</a>
-								</li>
-								<li>
-									<a href="https://www.acatlan.unam.mx/PIU/contacto.html">
-										<i style="color:white;" class="far fa-envelope fa-3x"></i>
-									</a>
-								</li>
-							</ul>
-						</aside>
-            <main id="content"> </main>
-        </section>
-    <canvas id="salvapantallas"></canvas>
-  <script src="js/index.js" defer></script>
-  <script src="js/canvas.js" defer></script>
+<section id="layout">
+    <nav id="main-nav">
+        <ul>
+            <li class="user">
+                <img class="circular" src={{avatar}} alt="">
+                <h3> Bienvenido {{user}} </h3>
+            </li>
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+            <li>
+                <a href="#">Servicios
+                    <span class="arrow">&#x25BC;</span>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="http://www.becas.unam.mx/portal/index.php/licenciatura">Becas</a>
+                    </li>
+                    <li>
+                        <a href="https://www.software.unam.mx/">Software</a>
+                    </li>
+                    <li>
+                        <a href="http://quazar.acatlan.unam.mx/licenciaturas/231/">Titulación</a>
+                        <span class="arrow">&#x25B6;</span>
+                        </a>
+                        <ul class="submenu-2">
+                            <li>
+                                <a href="https://www.acatlan.unam.mx/index.php?id=160">Servicio Social</a>
+                            </li>
+                            <li>
+                                <a href="https://mac.acatlan.unam.mx/media/vinculos/2021/06/Diplomados_titulacion.pdf">Diplomados</a>
+                            </li>
+                            <li>
+                                <a href="http://quazar.acatlan.unam.mx/licenciaturas/231/">Información General</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>		
+            </li>
+            <li>
+                <a href="#">Plataformas
+                    <span class="arrow">&#x25BC;</span>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="https://www.acatlan.unam.mx/">FES Acatlán</a>
+                    </li>
+                    <li>
+                        <a href="http://www.escolares.acatlan.unam.mx/">Escolares</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/logout">Cerrar Sesión</a>
+            </li>
+            <li>
+                <a href="#">Acerca de Nosotros</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="foto1" class="carrusel"> hola </div>
+    <div id="foto2" class="carrusel"> hola </div>
+    <div id="foto3" class="carrusel"> hola </div>
+    <aside>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/MACAcatlanOficial/">
+                    <i style="color:white;" class="fab fa-facebook-square fa-3x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/channel/UC_lTHdhOi5XhRbl_FcY7eTw">
+                    <i style="color:white;" class="fab fa-youtube fa-3x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.acatlan.unam.mx/index.php?id=112">
+                    <i style="color:white;" class="far fa-newspaper fa-3x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.acatlan.unam.mx/PIU/contacto.html">
+                    <i style="color:white;" class="far fa-envelope fa-3x"></i>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main id="content"> </main>
+</section>
+<canvas id="salvapantallas"></canvas>
+<script src="js/index.js" defer></script>
+<script src="js/canvas.js" defer></script>
 {% endblock %}
 
