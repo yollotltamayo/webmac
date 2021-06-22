@@ -219,7 +219,7 @@ main {
     flex-wrap: wrap;
     align-items:flex-start;
     align-content:center;
-    jus>tify-content:center;
+    justify-content:center;
 }
 .forms {
 background-color:transparent;
