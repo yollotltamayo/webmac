@@ -1,5 +1,7 @@
-create table if not exists user (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT UNIQUE NOT NULL,
-    password TEXT NOT NULL
-);
+-- create table if not exists user (
+    -- id INTEGER PRIMARY KEY AUTOINCREMENT,
+    -- username TEXT UNIQUE NOT NULL,
+    -- password TEXT NOT NULL
+-- );
+ALTER TABLE user
+ADD COLUMN avatar TEXT ;
