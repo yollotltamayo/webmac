@@ -127,12 +127,15 @@ aside {
   grid-area: lef;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  height: 300px;
+  height: 215px;
+	width: 70px;
   position: sticky;
   top:10vh;
+	font-family: "Roboto", sans-serif;
   margin-left:20px;
   margin-right:20px;
   margin-top:15px;
+	background-color: #1c3d6c;
 }
 aside ul {
   position: sticky;
@@ -142,10 +145,13 @@ aside ul {
   display: flex;
   flex-direction: column;
 }
+aside li{
+  margin:0 auto;
+  margin-top: 5px;
+}
 main {
   grid-area: con;
 }
-
 
 #content {
   display: flex;
