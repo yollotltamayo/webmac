@@ -183,18 +183,26 @@ main {
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   overflow: hidden;
-  transition: all 0.2s linear;
+  /*transition: all 0.2s linear;*/
   color: #1E90FF;
   text-align: center;
   flex-grow: 1;
-  width: 25%;
+  /*height:300px;*/
+  width: 35%;
+
 }
 .card h1 {
   margin: 0 0 2rem 0;
   padding: 2rem 1.5rem;
+  /*height:200px;*/
+  max-height:200px;
+  overflow:hidden;
   padding-top: 0rem;
   background-color: #fff;
   border: 0.0625rem solid linear-gradient(120deg, #DA2826, 0%, #25D7D9, 100%);
+  transition: max-height 0.5s linear;
+  font-size:0.9em;
+  text-align:left;
 }
 .card h3 {
   margin: 0;
@@ -204,13 +212,18 @@ main {
   text-align: right;
   font-size: 1.3rem;
 }
+.card button { 
+    all:unset;
+
+}
 
 .bordes {
   border-bottom: 0.0625rem solid #1a1a2e;
+  display:none;
 }
 
 .card:hover {
-  transform: translateY(-3px) scale(1.1);
+  transform: translateY(-1px) scale(1);
 }
 
 /* forms es el estilo para todos los formularios que se deban llenar*/
