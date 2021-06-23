@@ -114,8 +114,7 @@ nav > ul :first-child {
   display: grid;
   height: 100%;
   grid-template-areas: "nav nav nav nav nav "
-                       "slider slider slider slider slider" 
-                       "puntos puntos puntos puntos puntos"
+                       "slider slider slider slider slider"
                        "lef con con con .  " 
                        "footer footer footer  footer footer";
   grid-template-columns: repeat(5,1fr);
