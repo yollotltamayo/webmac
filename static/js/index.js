@@ -62,30 +62,3 @@ function appendSvg() {
     }
 }
 appendSvg();
-
-var index = 1;
-muestraPag(index);
-	
-function aumentoPag(n) {
-  muestraPag(index += n);
-}
-	
-function pagActual(n) {
-  muestraPag(index = n);
-}
-	
-function muestraPag(n) {
-  var i;
-  var slides = document.getElementsByClassName("pagina");
-  var puntos = document.getElementsByClassName("punto");
-  if (n > slides.length) {index = 1}    
-  if (n < 1) {index = slides.length}
-  for (i = 0; i < slides.length; i++) {
-	  slides[i].style.display = "none";  
-  }
-  for (i = 0; i < puntos.length; i++) {
-	  puntos[i].className = puntos[i].className.replace(" active", "");
-  }
-  slides[index-1].style.display = "block";  
-  puntos[index-1].className += " active";
-}
