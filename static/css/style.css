@@ -114,7 +114,7 @@ nav > ul :first-child {
   display: grid;
   height: 100%;
   grid-template-areas: "nav nav nav nav nav "
-                       ". slide slide slide .  " 
+                       "slider slider slider slider slider"
                        "lef con con con .  " 
                        "footer footer footer  footer footer";
   grid-template-columns: repeat(5,1fr);
@@ -171,6 +171,9 @@ aside li:hover{
 	transform: translateY(-3px) scale(1.1);
 }
 
+div{
+  grid-area: puntos;
+}
 
 main {
   grid-area: con;
@@ -480,9 +483,82 @@ button {
     text-align:center;
 }
 
+/*Carrusel*/
+
+.carrusel {
+  grid-area: slider;
+  position: relative;
+  margin: auto;
+}
+
+img{
+  width:100%;
+}
+
+.pagina {
+  display: none;
+}
+
+.ant, .sig {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.sig {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.ant:hover, .sig:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.punto {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .punto:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 iframe{
   margin: auto;
   border: 1px solid red;
   width: 100%;
   height: 10%; 
 }
+
