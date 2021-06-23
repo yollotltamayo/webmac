@@ -119,8 +119,22 @@ nav > ul :first-child {
                        "footer footer footer  footer footer";
   grid-template-columns: repeat(5,1fr);
   grid-template-rows: auto auto auto auto;
+  background:transparent;
 }
+#nubes {
+    position:absolute;
+  display: grid;
+  height: 100%;
+  width:100%;
+  z-index:-1;
+  grid-template-columns: repeat(8,1fr);
+  grid-template-rows: repeat(100,calc(100%/8));
+}
+.nube {
+    position:absolute;
+    display:none;
 
+}
 nav {
   grid-area: nav;
 }
@@ -184,6 +198,7 @@ main {
   border-radius: 12px;
   overflow: hidden;
   color: #1E90FF;
+    transition: all 0.2s linear;
   text-align: center;
   flex-grow: 1;
   width: 35%;
@@ -219,7 +234,7 @@ main {
 }
 
 .card:hover {
-  transform: translateY(-1px) scale(1);
+  transform: translateY(-10px) scale(1.1);
 }
 
 /* forms es el estilo para todos los formularios que se deban llenar*/
@@ -252,7 +267,6 @@ background-color:transparent;
     background:revert;
     animation:revert;
     background-image: linear-gradient( 45deg,#1C3D6Cff, #384B5Fff, #545952ff, #716746ff, #8D7539ff, #A9832Cff, #C5911Fff) !important;
-    /*45deg,#c5911f, #1c3d6c) !important;*/
     background-size:500% ;
     animation: bg-change 5s infinite alternate;
     height:100vh;
@@ -424,11 +438,14 @@ footer {
 .panel {
     margin:0;
     padding:10px 10px;
+    color:white;
+    font-size:1em;
     
 }
-.panel >{
-    margin:0;
-    padding:0;
+.panel > p{
+    /*display:flex;*/
+    /*flex-direction:row;*/
+    /*align-items:center;*/
 }
 .user {
     display:flex;
@@ -452,4 +469,13 @@ button {
   border-radius: 50%;
   width:50px;
   height:50px;
+}
+
+#error {
+    border: 0.5px red solid;    
+    border-radius:5px;
+    padding:10px 5px;
+    color:red;
+    background-color: rgba(255, 99, 71,0.1);
+    text-align:center;
 }

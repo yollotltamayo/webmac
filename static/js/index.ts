@@ -46,3 +46,23 @@ fetch('https://ghibliapi.herokuapp.com/films')
   .then( res => res.json() )
   .then(data => loadDom(data));
 
+function appendSvg () { 
+    const changeSvg = (n:number) => {
+        let svg = `<div class="nube">
+    <svg height="100px" width="100px" height="100px" version="1.1" viewBox="0 0 30.753 19.727" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(-45.794 .83433)" fill="black">
+        <circle cx="53.171" cy="10.82" r="7.377" style="paint-order:markers fill stroke"/>
+        <circle cx="62.036" cy="6.3613" r="7.1957" style="paint-order:markers fill stroke"/>
+        <circle cx="69.351" cy="11.398" r="7.1957" style="paint-order:markers fill stroke"/>
+        <circle cx="60.451" cy="11.697" r="7.1957" style="paint-order:markers fill stroke"/>
+        </g>
+    </svg>
+    </div>`;
+        return svg;
+    }
+    var nubes = document.getElementById('nubes');
+    for(var i = 0 ; i < 10 ; i++){
+    nubes.insertAdjacentHTML( "beforebegin", changeSvg(i));
+    }
+}
+appendSvg();
