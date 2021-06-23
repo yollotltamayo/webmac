@@ -69,7 +69,7 @@ def register():
 
         db.execute(
             "INSERT INTO user (username, password,avatar) VALUES (?, ?,?)",
-            (user, hash_password(user, request.form['password']),avatar)
+            (user, hash_password(request.form['password']),avatar)
         )
         db.commit()
         return redirect('/login')
