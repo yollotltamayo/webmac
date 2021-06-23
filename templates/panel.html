@@ -1,27 +1,61 @@
 {% extends "layout.html" %}
+{% block title %}Panel{% endblock %}
 {% block content %}
 <div class="gradient_bg">
     <div class="login-container">
         <div class="form-datos">
-            <form class="panel" action = "/login" method = "POST">
+            <form class="forms panel" action = "/panel" method = "POST">
                 <p><h3>Tus datos</h3></p>
-                <p><input required placeholder="Usuario" type = 'text' name = 'username'/></p>
-                hola 
+                Para actualizar tus datos solo remplaza los valores actuales y da click en "Guardar".
                 <p>
-                hola
-                <input style="display:inline;" required placeholder="Contraseña" type = 'password' name = 'password'/></p>
-                <p><input  type = 'submit' value = 'Ingresar'/></p>
+                <h3>
+                    Usuario
+                </h3>
+                    <input required  type='text' value={{user}} name = 'username'/>
+                </p>
+                <p>
+                    <h3>
+                        Avatar
+                    </h3>
+                    <input required  type='text' value={{avatar}} name = 'avatar'/>
+                </p>
+                <p>
+                    <h3>
+                        Contraseña
+                    </h3>
+                    Para cambiar tu contraseña ingresa tu antigua contraseña y tu nueva contraseña,
+                    <br<></br>
+                    si no lo deseas puedes dejarlo en blanco.
+                    <h4>
+                        Antigua contraseña
+                    </h4>
+                    <input  placeholder="Contraseña" type='password' name = 'password'/>
+                </p> 
+                    <h4>
+                        Nueva contraseña
+                    </h4>
+                    <input  placeholder="Nueva contraseña" type='password' name = 'newpassword'/>
+                </p> 
+                <p> 
+                    <input  type = 'submit' value = 'Guardar'/>
+                </p>
             </form>
             {% with messages = get_flashed_messages() %}
             {% if messages %}
-            <!--<ul class=flashes>-->
             {% for message in messages %}
-            <b class="aviso-error">{{ message }}</b>
+            <div width="100%" class="aviso-error">{{ message }}</div>
             {% endfor %}
             {% endif %}
             {% endwith %}
-            <a class="aviso-registro" href="/register">
-                <strong>¿Aún no tienes cuenta? registrate aquí.</strong>
+        <h4>
+            Zona de peligro
+        </h4>
+        <form action="/delete" method="POST">
+            <input  id="error" class="aviso-error" type = 'submit' value = 'Borrar cuenta'/>
+        </form>
+            <br></br>
+            <a style="text-align:center;" class="aviso-registro" href="/">
+                <strong>Regresar a la pagina principal.</strong>
             </a>
         </div>
     </div>
