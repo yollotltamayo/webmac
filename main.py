@@ -29,7 +29,7 @@ def validar(user, password):
     _user= get_user(user)
     if _user is None:
         return False
-    if _user['password'] == hash_password(user, password):
+    if _user['password'] == hash_password(password):
         return True
 
     return False
@@ -119,7 +119,7 @@ def panel():
                db = d.get_db()
                if password:
                    db.execute( query(password) ,
-                           (new_user,avatar,hash_password(new_user, new_pass),_user['id']))
+                           (new_user,avatar,hash_password( new_pass),_user['id']))
                    db.commit()
                else:
                    print(query())
