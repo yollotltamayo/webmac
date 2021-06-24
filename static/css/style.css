@@ -121,7 +121,7 @@ nav > ul :first-child {
   background:transparent;
 }
 #nubes {
-    position:absolute;
+  position:absolute;
   display: grid;
   height: 100%;
   width:100%;
@@ -412,15 +412,32 @@ input[type="submit"]:hover {
 }
 
 footer > ul {
-    position:absolute;
-    list-style:none;
-    margin:0;
-    padding:0;
+  margin: 3em;
+  padding: 0;
 }
+
 footer {
+  overflow: hidden;
+  border: 2px #c5911f solid;
+  border-radius: 10px;
   grid-area: footer;
-  margin : 0;
-  background-color:transparent;
+}
+
+.nubes {
+  height: 10em;
+  background: url("/multimedia/imagenes/nubes.svg");
+  background-repeat: repeat;
+  background-size: auto 100%;
+  animation: mueveNubes 6500s linear infinite;
+}
+
+@keyframes mueveNubes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 0;
+  }
 }
 
 #salvapantallas { 
