@@ -112,7 +112,8 @@ nav > ul :first-child {
 #layout {
   display: grid;
   height: 100%;
-  grid-template-areas: "nav nav nav nav nav "
+  grid-template-areas: "head head head head head "
+                       "nav nav nav nav nav "
                        "slider slider slider slider slider"
                        "lef con con con .  " 
                        "footer footer footer  footer footer";
@@ -120,6 +121,7 @@ nav > ul :first-child {
   grid-template-rows: auto auto auto auto;
   background:transparent;
 }
+
 #nubes {
     position:absolute;
   display: grid;
@@ -593,5 +595,63 @@ img{
     vertical-align: middle;
     border-radius: 64px 64px 64px 64px;
     background-color: #1c3d6c;
+}
 
+header {
+  grid-area: head;
+  background-color: #203c6c;
+  border-bottom: 1px solid #bd8c00;
+}
+
+.webmac {
+  margin-right: 7vh;
+  float: right;
+  color: hsla(0, 0%, 0%, 0.9);
+  font: 6vh sans-serif;
+  letter-spacing: 10px;
+  animation: vapor linear 6000ms infinite;
+}
+
+#logo_fes {
+  margin: 1em 1em 1em 2em;
+  height: 14vh;
+  width: auto;
+}
+
+@keyframes vapor {
+  0% {
+    text-shadow: 4px -4px 0 hsla(0, 100%, 50%, 1),
+      3px -3px 0 hsla(0, 100%, 50%, 1), 2px -2px 0 hsla(0, 100%, 50%, 1),
+      1px -1px 0 hsla(0, 100%, 50%, 1), -4px 4px 0 hsla(180, 100%, 50%, 1),
+      -3px 3px 0 hsla(180, 100%, 50%, 1), -2px 2px 0 hsla(180, 100%, 50%, 1),
+      -1px 1px 0 hsla(180, 100%, 50%, 1);
+  }
+  25% {
+    text-shadow: -4px -4px 0 hsla(180, 100%, 50%, 1),
+      -3px -3px 0 hsla(180, 100%, 50%, 1), -2px -2px 0 hsla(180, 100%, 50%, 1),
+      -1px -1px 0 hsla(180, 100%, 50%, 1), 4px 4px 0 hsla(0, 100%, 50%, 1),
+      3px 3px 0 hsla(0, 100%, 50%, 1), 2px 2px 0 hsla(0, 100%, 50%, 1),
+      1px 1px 0 hsla(0, 100%, 50%, 1);
+  }
+  50% {
+    text-shadow: -4px 4px 0 hsla(0, 100%, 50%, 1),
+      -3px 3px 0 hsla(0, 100%, 50%, 1), -2px 2px 0 hsla(0, 100%, 50%, 1),
+      -1px 1px 0 hsla(0, 100%, 50%, 1), 4px -4px 0 hsla(180, 100%, 50%, 1),
+      3px -3px 0 hsla(180, 100%, 50%, 1), 2px -2px 0 hsla(180, 100%, 50%, 1),
+      1px -1px 0 hsla(180, 100%, 50%, 1);
+  }
+  75% {
+    text-shadow: 4px 4px 0 hsla(180, 100%, 50%, 1),
+      3px 3px 0 hsla(180, 100%, 50%, 1), 2px 2px 0 hsla(180, 100%, 50%, 1),
+      1px 1px 0 hsla(180, 100%, 50%, 1), -4px -4px 0 hsla(0, 100%, 50%, 1),
+      -3px -3px 0 hsla(0, 100%, 50%, 1), -2px -2px 0 hsla(0, 100%, 50%, 1),
+      -1px -1px 0 hsla(0, 100%, 50%, 1);
+  }
+  100% {
+    text-shadow: 4px -4px 0 hsla(0, 100%, 50%, 1),
+      3px -3px 0 hsla(0, 100%, 50%, 1), 2px -2px 0 hsla(0, 100%, 50%, 1),
+      1px -1px 0 hsla(0, 100%, 50%, 1), -4px 4px 0 hsla(180, 100%, 50%, 1),
+      -3px 3px 0 hsla(180, 100%, 50%, 1), -2px 2px 0 hsla(180, 100%, 50%, 1),
+      -1px 1px 0 hsla(180, 100%, 50%, 1);
+  }
 }
