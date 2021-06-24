@@ -1,7 +1,16 @@
 {% extends "layout.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
+
 <main class="nubes" id="layout">
+    <header>
+    <div style="vertical-align: middle;">
+      <a href="https://webmac.herokuapp.com">
+        <img id="logo_fes" src="https://www.acatlan.unam.mx/identidad-acatlan/img/Logotipos/Escudo/escudo-d.png">
+      </a>
+      <h1 class="webmac">WEBM@C</h1>
+    </div>
+  </header>
     <nav id="main-nav">
         <ul>
             <li class="user">
@@ -62,9 +71,10 @@
                 <a href="#">Acerca de Nosotros</a>
             </li>
         </ul>
-    </nav>
+  </nav>
 
-<div class="carrusel">
+  <div class="carrusel">
+
 
 	<div class="pagina fade">
 	  <img alt="La piedra" src="/multimedia/imagenes/fes1.jpg" style="width:100%">
@@ -78,20 +88,27 @@
 	  <img alt="Idiomas" src="/multimedia/imagenes/fes3.jpg" style="width:100%">
 	</div>
 
+
+    <div class="pagina fade">
+      <img src="/multimedia/imagenes/fes2.jpg" style="width:100%">
+    </div>
+
+    <div class="pagina fade">
+      <img src="/multimedia/imagenes/fes3.jpg" style="width:100%">
+    </div>
+
     <div class="flechas-carrusel">
-        <a class="ant" onclick="aumentoPag(-2)">&#10094;</a>
-        <a class="sig" onclick="aumentoPag(1)">&#10095;</a>
+      <a class="ant" onclick="aumentoPag(-2)">&#10094;</a>
+      <a class="sig" onclick="aumentoPag(1)">&#10095;</a>
     </div>
 
     <div style="text-align:center">
-        <span class="punto" onclick="pagActual(1)"></span>
-        <span class="punto" onclick="pagActual(2)"></span>
-        <span class="punto" onclick="pagActual(3)"></span>
+      <span class="punto" onclick="pagActual(1)"></span>
+      <span class="punto" onclick="pagActual(2)"></span>
+      <span class="punto" onclick="pagActual(3)"></span>
     </div>
-</div>
- <br>
-
-
+  </div>
+  <br>
     <aside>
         <ul>
             <li>
@@ -131,9 +148,7 @@
             <div class="barrita"></div>
             </div>
         <div class="card">
-
-            <h3>topico</h3>
-
+      <h3>topico</h3>
             <h2>Only Yesterday</h2>
             <h1>It’s 1982, and Taeko is 27 yeaams of her childhood self.</h1>
             <button>  Leer mas</button>
@@ -154,4 +169,3 @@
 <script src="js/index.js" defer></script>
 <script src="js/canvas.js" defer></script>
 {% endblock %}
-
