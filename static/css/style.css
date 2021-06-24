@@ -118,7 +118,7 @@ nav > ul :first-child {
                        "lef con con con .  " 
                        "footer footer footer  footer footer";
   grid-template-columns: repeat(5,1fr);
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   background:url("/multimedia/imagenes/nubes.svg");
   animation:mueveNubes 400s linear infinite;
 }
