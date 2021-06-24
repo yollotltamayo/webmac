@@ -103,16 +103,19 @@
 	  <img src="/multimedia/imagenes/fes3.jpg" style="width:100%">
 	</div>
 
-	<a class="ant" onclick="aumentoPag(-1)">&#10094;</a>
-	<a class="sig" onclick="aumentoPag(1)">&#10095;</a>
+    <div class="flechas-carrusel">
+        <a class="ant" onclick="aumentoPag(-2)">&#10094;</a>
+        <a class="sig" onclick="aumentoPag(1)">&#10095;</a>
+    </div>
+
+    <div style="text-align:center">
+        <span class="punto" onclick="pagActual(1)"></span>
+        <span class="punto" onclick="pagActual(2)"></span>
+        <span class="punto" onclick="pagActual(3)"></span>
+    </div>
 </div>
  <br>
 
- <div style="text-align:center">
-    <span class="punto" onclick="pagActual(1)"></span>
-	<span class="punto" onclick="pagActual(2)"></span>
-	<span class="punto" onclick="pagActual(3)"></span>
-</div>
 
     <aside>
         <ul>
@@ -139,15 +142,26 @@
         </ul>
     </aside>
     <main id="content">
-        <div class="recur">
-            <h3>Recursos Digitales</h>
-            <iframe class= "recur" src="https://www.youtube.com/embed/R6hGmXEjmuc" style="height:315px;width:560px"
+        <div class="video" style="width:100%;" >
+            <div class="barritas">
+            <div class="barrita"></div>
+            <h3>Recursos Digitales</h3>
+            <div class="barrita"></div>
+            </div>
+            <iframe class= "forms" src="https://www.youtube.com/embed/R6hGmXEjmuc" style="height:315px;width:560px"
                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
         </div>
+            <div class="barritas">
+            <div class="barrita"></div>
+            <h3>Contenido</h3>
+            <div class="barrita"></div>
+            </div>
         <div class="card">
+
             <h3>topico</h3>
+
             <h2>Only Yesterday</h2>
             <h1 class="bordes"></h1>
             <h1>It’s 1982, and Taeko is 27 yeaams of her childhood self.</h1>
