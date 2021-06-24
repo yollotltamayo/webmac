@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<section class="nubes" id="layout">
+
+<main class="nubes" id="layout">
     <header>
     <div style="vertical-align: middle;">
       <a href="https://webmac.herokuapp.com">
@@ -33,7 +34,6 @@
                     <li>
                         <a href="http://quazar.acatlan.unam.mx/licenciaturas/231/">Titulación</a>
                         <span class="arrow">&#x25B6;</span>
-                        </a>
                         <ul class="submenu-2">
                             <li>
                                 <a href="https://www.acatlan.unam.mx/index.php?id=160">Servicio Social</a>
@@ -75,9 +75,19 @@
 
   <div class="carrusel">
 
-    <div class="pagina fade">
-      <img src="/multimedia/imagenes/fes1.jpg" style="width:100%">
-    </div>
+
+	<div class="pagina fade">
+	  <img alt="La piedra" src="/multimedia/imagenes/fes1.jpg" style="width:100%">
+	</div>
+  
+	<div class="pagina fade">
+	  <img alt="Campo de futbol" src="/multimedia/imagenes/fes2.jpg" style="width:100%">
+	</div>
+  
+	<div class="pagina fade">
+	  <img alt="Idiomas" src="/multimedia/imagenes/fes3.jpg" style="width:100%">
+	</div>
+
 
     <div class="pagina fade">
       <img src="/multimedia/imagenes/fes2.jpg" style="width:100%">
@@ -123,14 +133,14 @@
             </li>
         </ul>
     </aside>
-    <main id="content">
+    <section id="content">
         <div class="video" style="width:100%;" >
             <div class="barritas">
             <div class="barrita"></div>
             <h3>Recursos Digitales</h3>
             <div class="barrita"></div>
             </div>
-            <iframe class="forms" width="560" height="315" src="https://www.youtube.com/embed/KO00XyKtWNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="forms" width="560" height="315" src="https://www.youtube.com/embed/KO00XyKtWNk" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
             <div class="barritas">
             <div class="barrita"></div>
@@ -140,11 +150,10 @@
         <div class="card">
       <h3>topico</h3>
             <h2>Only Yesterday</h2>
-            <h1 class="bordes"></h1>
             <h1>It’s 1982, and Taeko is 27 yeaams of her childhood self.</h1>
             <button>  Leer mas</button>
         </div>
-    </main>
+    </section>
     <footer class="forms" >
         <ul>
             <li style="color:black">Muciño Guerrero Bruno Andrés</li>
@@ -153,9 +162,9 @@
             <li style="background:#f08080;">Villegas Ricaño Erandi</li>
             <li style="background:#750896;">Gándara Hernández Aldair</li>
         </ul>
-        <div style="background:#00a135;"class="copyright">Copyright©2021</div>
+        <div style="background:#00a135;" class="copyright">Copyright©2021</div>
     </footer>
-</section>
+</main>
 <canvas id="salvapantallas"></canvas>
 <script src="js/index.js" defer></script>
 <script src="js/canvas.js" defer></script>
