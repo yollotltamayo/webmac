@@ -44,6 +44,7 @@ nav >  ul > li {
 	text-align: center;
 	position: relative;
     padding:0  20px ;
+  z-index:950;
 }
 
 nav> ul >  li:hover .submenu > li {
@@ -489,10 +490,7 @@ button {
   grid-area: slider;
   position: relative;
   margin: auto;
-}
-
-img{
-  width:100%;
+  z-index:900;
 }
 
 .pagina {
@@ -514,6 +512,10 @@ img{
   user-select: none;
 }
 
+.ant{
+  left: 0;
+}
+
 .sig {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -521,6 +523,10 @@ img{
 
 .ant:hover, .sig:hover {
   background-color: rgba(0,0,0,0.8);
+}
+
+span{
+  margin: 0auto;
 }
 
 .punto {
