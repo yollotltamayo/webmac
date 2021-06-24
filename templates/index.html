@@ -2,6 +2,14 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 <section class="nubes" id="layout">
+    <header>
+    <div style="vertical-align: middle;">
+      <a href="https://webmac.herokuapp.com">
+        <img id="logo_fes" src="https://www.acatlan.unam.mx/identidad-acatlan/img/Logotipos/Escudo/escudo-d.png">
+      </a>
+      <h1 class="webmac">WEBM@C</h1>
+    </div>
+  </header>
     <nav id="main-nav">
         <ul>
             <li class="user">
@@ -63,36 +71,58 @@
                 <a href="#">Acerca de Nosotros</a>
             </li>
         </ul>
-    </nav>
+      </li>
+      <li>
+        <a href="#">Plataformas
+          <span class="arrow">&#x25BC;</span>
+        </a>
+        <ul class="submenu">
+          <li>
+            <a href="https://www.acatlan.unam.mx/">FES Acatlán</a>
+          </li>
+          <li>
+            <a href="http://www.escolares.acatlan.unam.mx/">Escolares</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/panel">Ajustes de la Cuenta</a>
+      </li>
+      <li>
+        <a href="/logout">Cerrar Sesión</a>
+      </li>
+      <li>
+        <a href="#">Acerca de Nosotros</a>
+      </li>
+    </ul>
+  </nav>
 
-<div class="carrusel">
+  <div class="carrusel">
 
-	<div class="pagina fade">
-	  <img src="/multimedia/imagenes/fes1.jpg" style="width:100%">
-	</div>
-  
-	<div class="pagina fade">
-	  <img src="/multimedia/imagenes/fes2.jpg" style="width:100%">
-	</div>
-  
-	<div class="pagina fade">
-	  <img src="/multimedia/imagenes/fes3.jpg" style="width:100%">
-	</div>
+    <div class="pagina fade">
+      <img src="/multimedia/imagenes/fes1.jpg" style="width:100%">
+    </div>
+
+    <div class="pagina fade">
+      <img src="/multimedia/imagenes/fes2.jpg" style="width:100%">
+    </div>
+
+    <div class="pagina fade">
+      <img src="/multimedia/imagenes/fes3.jpg" style="width:100%">
+    </div>
 
     <div class="flechas-carrusel">
-        <a class="ant" onclick="aumentoPag(-2)">&#10094;</a>
-        <a class="sig" onclick="aumentoPag(1)">&#10095;</a>
+      <a class="ant" onclick="aumentoPag(-2)">&#10094;</a>
+      <a class="sig" onclick="aumentoPag(1)">&#10095;</a>
     </div>
 
     <div style="text-align:center">
-        <span class="punto" onclick="pagActual(1)"></span>
-        <span class="punto" onclick="pagActual(2)"></span>
-        <span class="punto" onclick="pagActual(3)"></span>
+      <span class="punto" onclick="pagActual(1)"></span>
+      <span class="punto" onclick="pagActual(2)"></span>
+      <span class="punto" onclick="pagActual(3)"></span>
     </div>
-</div>
- <br>
-
-
+  </div>
+  <br>
     <aside>
         <ul>
             <li>
@@ -132,9 +162,7 @@
             <div class="barrita"></div>
             </div>
         <div class="card">
-
-            <h3>topico</h3>
-
+      <h3>topico</h3>
             <h2>Only Yesterday</h2>
             <h1 class="bordes"></h1>
             <h1>It’s 1982, and Taeko is 27 yeaams of her childhood self.</h1>
@@ -156,4 +184,3 @@
 <script src="js/index.js" defer></script>
 <script src="js/canvas.js" defer></script>
 {% endblock %}
-
