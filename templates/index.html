@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<section  class="gradient_bg" id="layout">
-  <header>
+<section class="nubes" id="layout">
+    <header>
     <div style="vertical-align: middle;">
       <a href="https://webmac.herokuapp.com">
         <img id="logo_fes" src="https://www.acatlan.unam.mx/identidad-acatlan/img/Logotipos/Escudo/escudo-d.png">
@@ -10,43 +10,66 @@
       <h1 class="webmac">WEBM@C</h1>
     </div>
   </header>
-
-  <nav id="main-nav">
-    <ul>
-      <li class="user">
-        <img class="circular" src={{avatar}} alt="">
-        <h3> Hola {{user}} </h3>
-      </li>
-      <li>
-        <a href="#">Inicio</a>
-      </li>
-      <li>
-        <a href="#">Servicios
-          <span class="arrow">&#x25BC;</span>
-        </a>
-        <ul class="submenu">
-          <li>
-            <a href="http://www.becas.unam.mx/portal/index.php/licenciatura">Becas</a>
-          </li>
-          <li>
-            <a href="https://www.software.unam.mx/">Software</a>
-          </li>
-          <li>
-            <a href="http://quazar.acatlan.unam.mx/licenciaturas/231/">Titulación</a>
-            <span class="arrow">&#x25B6;</span>
-            </a>
-            <ul class="submenu-2">
-              <li>
-                <a href="https://www.acatlan.unam.mx/index.php?id=160">Servicio Social</a>
-              </li>
-              <li>
-                <a href="https://mac.acatlan.unam.mx/media/vinculos/2021/06/Diplomados_titulacion.pdf">Diplomados</a>
-              </li>
-              <li>
-                <a href="http://quazar.acatlan.unam.mx/licenciaturas/231/">Información General</a>
-              </li>
-            </ul>
-          </li>
+    <nav id="main-nav">
+        <ul>
+            <li class="user">
+                <img class="circular" src={{avatar}} alt="">
+                <h3> Hola {{user}} </h3>
+            </li>
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+            <li>
+                <a href="#">Servicios
+                    <span class="arrow">&#x25BC;</span>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="http://www.becas.unam.mx/portal/index.php/licenciatura">Becas</a>
+                    </li>
+                    <li>
+                        <a href="https://www.software.unam.mx/">Software</a>
+                    </li>
+                    <li>
+                        <a href="http://quazar.acatlan.unam.mx/licenciaturas/231/">Titulación</a>
+                        <span class="arrow">&#x25B6;</span>
+                        </a>
+                        <ul class="submenu-2">
+                            <li>
+                                <a href="https://www.acatlan.unam.mx/index.php?id=160">Servicio Social</a>
+                            </li>
+                            <li>
+                                <a href="https://mac.acatlan.unam.mx/media/vinculos/2021/06/Diplomados_titulacion.pdf">Diplomados</a>
+                            </li>
+                            <li>
+                                <a href="http://quazar.acatlan.unam.mx/licenciaturas/231/">Información General</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>		
+            </li>
+            <li>
+                <a href="#">Plataformas
+                    <span class="arrow">&#x25BC;</span>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="https://www.acatlan.unam.mx/">FES Acatlán</a>
+                    </li>
+                    <li>
+                        <a href="http://www.escolares.acatlan.unam.mx/">Escolares</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/panel">Ajustes de la Cuenta</a>
+            </li>
+            <li>
+                <a href="/logout">Cerrar Sesión</a>
+            </li>
+            <li>
+                <a href="#">Acerca de Nosotros</a>
+            </li>
         </ul>
       </li>
       <li>
@@ -100,59 +123,62 @@
     </div>
   </div>
   <br>
-
-
-  <aside>
-    <ul>
-      <li>
-        <a href="https://www.facebook.com/MACAcatlanOficial/">
-          <i style="color:white;" class="fab fa-facebook-square fa-3x"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/channel/UC_lTHdhOi5XhRbl_FcY7eTw">
-          <i style="color:white;" class="fab fa-youtube fa-3x"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.acatlan.unam.mx/index.php?id=112">
-          <i style="color:white;" class="far fa-newspaper fa-3x"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.acatlan.unam.mx/PIU/contacto.html">
-          <i style="color:white;" class="far fa-envelope fa-3x"></i>
-        </a>
-      </li>
-    </ul>
-  </aside>
-  <main id="content">
-    <div class="video" style="width:100%;" >
-      <div class="barritas">
-        <div class="barrita"></div>
-        <h3>Recursos Digitales</h3>
-        <div class="barrita"></div>
-      </div>
-      <iframe class= "forms" src="https://www.youtube.com/embed/R6hGmXEjmuc" style="height:315px;width:560px"
-                                                                             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                                                                                          allowfullscreen>
-      </iframe>
-    </div>
-    <div class="barritas">
-      <div class="barrita"></div>
-      <h3>Contenido</h3>
-      <div class="barrita"></div>
-    </div>
-    <div class="card">
-
+    <aside>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/MACAcatlanOficial/">
+                    <i style="color:white;" class="fab fa-facebook-square fa-3x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/channel/UC_lTHdhOi5XhRbl_FcY7eTw">
+                    <i style="color:white;" class="fab fa-youtube fa-3x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.acatlan.unam.mx/index.php?id=112">
+                    <i style="color:white;" class="far fa-newspaper fa-3x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.acatlan.unam.mx/PIU/contacto.html">
+                    <i style="color:white;" class="far fa-envelope fa-3x"></i>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main id="content">
+        <div class="video" style="width:100%;" >
+            <div class="barritas">
+            <div class="barrita"></div>
+            <h3>Recursos Digitales</h3>
+            <div class="barrita"></div>
+            </div>
+            <iframe class="forms" width="560" height="315" src="https://www.youtube.com/embed/KO00XyKtWNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+            <div class="barritas">
+            <div class="barrita"></div>
+            <h3>Contenido</h3>
+            <div class="barrita"></div>
+            </div>
+        <div class="card">
       <h3>topico</h3>
-
-      <h2>Only Yesterday</h2>
-      <h1 class="bordes"></h1>
-      <h1>It’s 1982, and Taeko is 27 yeaams of her childhood self.</h1>
-      <button>  Leer mas</button>
-    </div>
-  </main>
+            <h2>Only Yesterday</h2>
+            <h1 class="bordes"></h1>
+            <h1>It’s 1982, and Taeko is 27 yeaams of her childhood self.</h1>
+            <button>  Leer mas</button>
+        </div>
+    </main>
+    <footer class="forms" >
+        <ul>
+            <li style="color:black">Muciño Guerrero Bruno Andrés</li>
+            <li style="background:#f39f18;">Paredes Gómez Diana Laura</li>
+            <li style="background:#1c3d6c;">Tamayo Hernández Fernando Yollotl</li>
+            <li style="background:#f08080;">Villegas Ricaño Erandi</li>
+            <li style="background:#750896;">Gándara Hernández Aldair</li>
+        </ul>
+        <div style="background:#00a135;"class="copyright">Copyright©2021</div>
+    </footer>
 </section>
 <canvas id="salvapantallas"></canvas>
 <script src="js/index.js" defer></script>

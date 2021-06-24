@@ -119,22 +119,8 @@ nav > ul :first-child {
                        "footer footer footer  footer footer";
   grid-template-columns: repeat(5,1fr);
   grid-template-rows: auto auto auto auto;
-  background:transparent;
-}
-
-#nubes {
-    position:absolute;
-  display: grid;
-  height: 100%;
-  width:100%;
-  z-index:-1;
-  grid-template-columns: repeat(8,1fr);
-  grid-template-rows: repeat(100,calc(100%/8));
-}
-.nube {
-    position:absolute;
-    display:none;
-
+  background:url("/multimedia/imagenes/nubes.svg");
+  animation:mueveNubes 400s linear infinite;
 }
 nav {
   grid-area: nav;
@@ -414,15 +400,44 @@ input[type="submit"]:hover {
 }
 
 footer > ul {
-    position:absolute;
-    list-style:none;
-    margin:0;
-    padding:0;
+  margin: 3em;
+  padding: 0;
+  margin:0;
+  list-style:none;
+  grid-area:nombres;
+  color:transparent;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+  color:black;
+}
+
+footer > ul > li {
+    color: white;
+    /*opacity: 0.5!important;*/
+    border-radius: 5px;
+    margin: 10px 0px
 }
 footer {
+  overflow: hidden;
+  /*border: 2px  solid;*/
+  border-radius: 10px;
   grid-area: footer;
-  margin : 0;
-  background-color:transparent;
+  display:grid;
+  grid-template-areas: "nombres copyright";
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  transition: height 0.5s linear;
+}
+
+
+@keyframes mueveNubes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 0;
+  }
 }
 
 #salvapantallas { 
@@ -504,6 +519,8 @@ img{
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  margin-top: -22px;
+  padding: 16px;
 }
 
 .sig {
@@ -555,8 +572,6 @@ img{
   position: absolute;
   top: 30%;
   width: 100%;
-  margin-top: -22px;
-  padding: 16px;
   color: white;
   justify-content:space-between;
 }
@@ -584,8 +599,8 @@ img{
 .barritas > h3{
     padding:0;
     margin:0;
-    color:white;
-    font-size:1.3em;
+    color:black;
+    font-size:1.3rem;
 }
 .barrita  {
     margin: 0 20px;
@@ -654,4 +669,7 @@ header {
       -3px 3px 0 hsla(180, 100%, 50%, 1), -2px 2px 0 hsla(180, 100%, 50%, 1),
       -1px 1px 0 hsla(180, 100%, 50%, 1);
   }
+}
+.copyright  {
+    grid-area:copyright;
 }
