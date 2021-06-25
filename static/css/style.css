@@ -1,14 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap");
- @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,600&display=swap');
-
-
 html, body {
   margin: 0;
   /*all:unset;*/
   background-color: #F8F8F8;
   background-image:white;
     box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif;
 }
 * {
       box-sizing: inherit;
@@ -135,7 +131,7 @@ aside {
 	width: 70px;
   position: sticky;
   top:10vh;
-	font-family: "Roboto", sans-serif;
+	font-family: sans-serif;
   margin-left:20px;
   margin-right:20px;
   margin-top:15px;
@@ -145,7 +141,7 @@ aside ul {
   position: sticky;
   all: unset;
   list-style: none;
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -180,7 +176,7 @@ main {
 .card {
   margin: 1rem;
   background: #aaa;
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   overflow: hidden;
@@ -244,7 +240,7 @@ background-color:transparent;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
 }
 .forms > h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif;
   color:white;
 }
 .login-aclaracion {
@@ -342,14 +338,14 @@ input[type="submit"]:hover {
 }
 .anuncio {
    font-size:9em; 
-   font-family: 'Karla', sans-serif;
+   font-family: sans-serif;
    color:white;
    text-align:center;
    align-self:stretch;
 }
 .anuncio-registro{
    font-size:9em; 
-   font-family: 'Karla', sans-serif;
+   font-family: sans-serif;
    color:white;
    text-align:center;
    align-self:center;
@@ -672,4 +668,10 @@ header {
 }
 .copyright  {
     grid-area:copyright;
+}
+
+.icono {  
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 70%;
 }
